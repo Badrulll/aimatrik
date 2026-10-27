@@ -41,8 +41,7 @@
                 <div class="col-12 col-md-6 order-md-2 order-first">
                     <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
                         <ol class="breadcrumb">
-                            <li class="breadcrumb-item text-subtitle"><a
-                                    href="{{ route('admin.setting.profile.index') }}">Pengaturan</a></li>
+                            <li class="breadcrumb-item text-subtitle"><a href="{{ route('admin.setting.profile.index') }}" style="color: #e60012;">Pengaturan</a></li>
                             <li class="breadcrumb-item active text-subtitle" aria-current="page">Profil</li>
                         </ol>
                     </nav>
@@ -57,14 +56,14 @@
 
             <div class="row">
                 <div class="col-12 col-md-4">
-                    <div class="card shadow-sm">
+                    <div class="card shadow-sm border-0">
                         <div class="card-header"></div>
                         <div class="card-body">
                             <section id="basic-horizontal-layouts">
-                                <div id="holder1" class="preview-images-zone row">
+                                <div id="holder1" class="preview-images-zone row text-center">
                                     <div class="preview-image col-12 col-md-12" style="max-width: 100%">
-                                        <img loading="lazy" width="100%" class="img img-responsive"
-                                            src="{{ isset($userProfileImage) ? asset('storage/' . $userProfileImage) : 'https://ui-avatars.com/api/?name=' . Auth::user()->username . '&background=2868d8&color=fff' }}" />
+                                        <img loading="lazy" width="100%" class="img img-responsive rounded-3 shadow-sm"
+                                            src="{{ isset($userProfileImage) ? asset('storage/' . $userProfileImage) : 'https://ui-avatars.com/api/?name=' . Auth::user()->username . '&background=e60012&color=fff' }}" />
                                     </div>
                                 </div>
                             </section>
@@ -73,9 +72,9 @@
                 </div>
 
                 <div class="col-12 col-md-8">
-                    <div class="card shadow-sm">
+                    <div class="card shadow-sm border-0">
                         <div class="card-header">
-                            <span class="text-danger">* Wajib diisi</span>
+                            {{-- Header opsional jika ingin ditambahkan styling --}}
                         </div>
                         <div class="card-body">
                             <section id="basic-horizontal-layouts">
@@ -87,10 +86,10 @@
                                     <div class="form-body">
                                         <div class="row">
                                             <div class="col-md-12 mb-3">
-                                                <label>Foto Profil</label>
+                                                <label class="form-label font-weight-bold">Foto Profil</label>
                                                 <div class="input-group">
                                                     <span class="input-group-btn">
-                                                        <a id="lfm1" class="btn btn-primary">
+                                                        <a id="lfm1" class="btn text-white" style="background-color: #e60012; border-color: #e60012;">
                                                             <i class="bi bi-image"></i> Pilih Gambar
                                                         </a>
                                                     </span>
@@ -99,25 +98,25 @@
                                                     <input id="file-upload" type="file" name="image"
                                                         accept=".jpg,.jpeg,.png,.gif,.svg,.webp" style="display: none;">
                                                 </div>
-                                                <small>Maksimal 2MB dengan format: jpg, jpeg, png, gif, svg, webp</small>
+                                                <small class="text-muted">Maksimal 2MB dengan format: jpg, jpeg, png, gif, svg, webp</small>
                                             </div>
 
                                             <div class="col-md-12 mb-2">
-                                                <label>Username<span class="text-danger">*</span></label>
+                                                <label class="form-label">Username<span class="text-danger">*</span></label>
                                                 <div class="form-group has-icon-left">
                                                     <div class="position-relative">
                                                         <input type="text" disabled class="form-control" required
                                                             placeholder="Kantor"
                                                             value="{{ Auth::user()->username ?? null }}">
                                                         <div class="form-control-icon">
-                                                            <i class="bi bi-key"></i>
+                                                            <i class="bi bi-key" style="color: #e60012;"></i>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
 
                                             <div class="col-md-12 mb-2">
-                                                <label>Nama<span class="text-danger">*</span></label>
+                                                <label class="form-label">Nama<span class="text-danger">*</span></label>
                                                 <div class="form-group has-icon-left">
                                                     <div class="position-relative">
                                                         <input type="text"
@@ -125,15 +124,16 @@
                                                             required placeholder="Nama" name="name"
                                                             value="{{ Auth::user()->name }}">
                                                         <div class="form-control-icon">
-                                                            <i class="bi bi-person"></i>
+                                                            <i class="bi bi-person" style="color: #e60012;"></i>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
 
-                                            <div class="col-12 d-flex justify-content-end">
-                                                <button type="submit" class="btn btn-sm btn-primary me-1 mb-1">Simpan
-                                                    Data</button>
+                                            <div class="col-12 d-flex justify-content-end mt-3">
+                                                <button type="submit" class="btn btn-sm text-white me-1 mb-1 shadow-sm" style="background-color: #e60012; border-color: #e60012;">
+                                                    Simpan Data
+                                                </button>
                                                 <button type="reset"
                                                     class="btn btn-sm btn-light-secondary me-1 mb-1">Reset</button>
                                             </div>

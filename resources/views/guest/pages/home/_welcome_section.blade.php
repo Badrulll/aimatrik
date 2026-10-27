@@ -1,4 +1,4 @@
-<div class="hero-area hero-area-canvas minus-margin overflow-hidden z-index-one"
+{{-- <div class="hero-area hero-area-canvas minus-margin overflow-hidden z-index-one"
     style="background-image: url('{{ asset('guest-assets/images/bg/hero-bg-canvas.png') }}');">
     <div class="container position-relative z-index-one">
         <div class="row justify-content-between align-items-center ">
@@ -18,4 +18,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}

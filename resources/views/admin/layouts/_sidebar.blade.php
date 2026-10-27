@@ -4,7 +4,7 @@
             <div class="d-flex justify-content-between align-items-center">
                 <div class="logo">
                     <a href="">
-                        <img src="{{ asset('assets/images/logo/logo-only.png') }}" alt="Logo"
+                        <img src="{{ asset('assets/images/logo/logo2.png') }}" alt="Logo"
                             class="img-fluid img-responsive" srcset="" />
                     </a>
                 </div>
@@ -76,3 +76,23 @@
         </div>
     </div>
 </div>
+
+{{-- CSS Tambahan untuk menyesuaikan warna Active Sidebar dengan Logo --}}
+<style>
+    .sidebar-item.active {
+        background-color: rgba(230, 0, 18, 0.08); /* Efek transparan merah logo */
+        border-radius: 0.5rem;
+    }
+    .sidebar-item.active .sidebar-link {
+        background-color: #e60012 !important;
+        color: #fff !important;
+        border-radius: 0.5rem;
+    }
+    .sidebar-item.active .sidebar-link i {
+        color: #fff !important;
+    }
+    .sidebar-item:not(.active) .sidebar-link:hover {
+        background-color: rgba(230, 0, 18, 0.04);
+        color: #e60012;
+    }
+</style>
